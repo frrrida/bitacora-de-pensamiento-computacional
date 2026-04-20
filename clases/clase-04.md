@@ -1,0 +1,34 @@
+# clase 4 
+## viernes 17 de abril
+
+  let posx
+  let posy 
+  son variables que se agregan fuera de setup y draw (puede ser arriba de todo)
+
+  puedo alterar la velocidad de reproduccion que por defecto es 60
+
+  con **frameCount** accedo a la cantidad de frames que han ocurrido desde que se ejecuto el codigo
+
+  con  \n creo una nueva linea en el mismo comando
+  ej: text("desde que se ejecuto" +  "\n han pasado" +  "\n" + frameCount + " \n frames", width/2, height/2)
+
+  cuando se le agrega el \n antes de una frase esta se irá poniendo abajo (como apretar enter al escribir)
+
+  **framerate** define que tan rapido van a pasar los frames
+
+  usamos la variable tinte (fuera del setup y draw)
+  let tinte = 0
+
+   
+  //actualizamos el valor de tinte
+  tinte = tinte + 1;
+  
+  //para reiniciar
+  if(tinte> 360){
+    tinte = 0
+  }
+
+  //para que el fondo sea un color complementario
+  
+  if(tinte < 180){
+    tinteComplementario = tinte + 180

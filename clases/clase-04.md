@@ -4,6 +4,7 @@
   let posx
   let posy 
   son variables que se agregan fuera de setup y draw (puede ser arriba de todo)
+  las variables de pueden actualizar por ejemplo agregarle 1 
 
   puedo alterar la velocidad de reproduccion que por defecto es 60
 

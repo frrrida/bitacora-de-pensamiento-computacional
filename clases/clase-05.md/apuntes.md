@@ -112,6 +112,84 @@ con el operador OR integramos dos condiciones en una y ocurrirá siempre q se ga
 ej: if(posMouseX < width/3 || posMouseX > width*2/3) 
 
 
+## parte tres
+
+podemos hacer margenes en el lienzo 
+fuera del setup ponemos
+let margenIzq= 10
+let margenDer= 100
+
+dentro del draw le ponemos los valores a estos margenes 
+margenIzq= width/5
+margenDer= width* 4/5
+
+para poder visualizar eso dibujamos lineas en esos margenes
+con 
+line(margenIzq, 0, margenIzq, height)
+line(margenDer, 0, margenDer, height)
+
+asi es mas facil para cambiar los margenes desde los valores q le dimos
+
+
+para agregar una imagen agegamos primero una variable fuera del setup q diga
+let + un nombre para luego agregar la imagen
+ej: let don
+
+luego dentro del setup ponemos
+don= loadImagen("./nombredelarchivo.jpg")
+don= loadImagen("./donFrancis.jpg")
+
+dentro del draw vamos a poner la imagen como tal incluyendo la variable q hicimos en el setup
+
+image(don, 0,0,100,100)
+le agregamos parametros por ejemplo para el ancho y alto de la imagen 
+image(img, x, y, [width], [height])
+
+para hacer q la imagen se mueva con el mouse en vez de poner 0,0 ponemos
+image(don, mouseX, mouseY, 100,100)
+
+funciones: 
+mousePressed ocurre cuando preciono el mouse
+mouseReleased ocurre cuando suelto el mouse 
+ambos deben  ir antes con la palabra funcion como el setup o draw y llevar () y {}
+
+ej:
+
+function mousePressed() {
+
+}
+
+
+ek background en draw constantemente se regenera en cambio en setup solo se genera una vez y todo lo q pase encima va a verse 
+
+
+para cambiar la posicion de la imagen podemos crear variables (fuera del setup) y le ponemos ahi los valores
+esto remplazaria las cordenadas 
+ej:
+let posX=0
+let posY=0 
+
+actualizamos la posicion de la imagen para q se mueva poniendo dentro del draw
+
+posX = posX + numero para la velocidad q queremos q se mueva
+posX = posX + 2
+
+podemos crear una variable para guardar la direccion llamada 
+let dirX = 
+
+dir es hacia la derecha si es 1 y hacia la izq si es -1
+
+con esto podemos hacer por ejemplo q la imagen se devuelva desde un punto exacto invirtiendo su dirección
+
+
+
+
+
+
+
+
+
+
 
 
 
